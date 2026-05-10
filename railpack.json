@@ -1,0 +1,6 @@
+{
+  "project": {
+    "provider": "dotnet",
+    "path": "SGE.UI/SGE.UI.csproj"
+  }
+}
