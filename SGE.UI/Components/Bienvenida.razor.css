@@ -1,0 +1,48 @@
+.caja_bienvenida{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: max-content;
+    margin-top: 85px;
+    margin-left: 100px;
+    padding: 40px;
+    box-shadow: -24px -13px 39px 2px rgba(0,0,0,1);
+    border-radius: 7px;
+    border: 8px outset #4d617e;
+}
+.boton{
+    width: 300px;
+    height: 50px;
+    background-color: #4d617e;
+    border-radius: 2px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.boton:hover{
+    background-color: #121121;
+    color:#ffff;
+}
+.parte_administrador{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: max-content;
+    margin-top: 25px;
+    margin-left: 154px;
+}
+h4{
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: bold; 
+}
+.titulo{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}

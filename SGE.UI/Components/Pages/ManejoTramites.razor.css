@@ -1,0 +1,52 @@
+.boton{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.boton:hover{
+    background-color: #121121;
+    color:#ffff;
+}
+th{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: 100px;
+    background-color: #7e8185;
+}
+.iden{
+    font-weight: bold; 
+    font-size: 18px;
+}
+td{
+    border: 2px solid #000000;
+    padding: 10px;
+}
+.boton-eliminar{
+    color:#ffff;
+    background-color: #e23131;
+    margin:5px;
+    padding:auto;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-eliminar:hover{
+    background-color: #6a1717;
+}
+.boton-modificar{
+    margin:5px;
+    padding:auto;
+    color:#ffff;
+    background-color: #366cbc;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-modificar:hover{
+    background-color: #1f3e6c;
+
+}

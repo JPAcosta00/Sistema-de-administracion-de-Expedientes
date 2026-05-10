@@ -1,0 +1,108 @@
+@page "/manejotramites{correoActual}"
+@rendermode InteractiveServer
+@inject CasoDeUsoTramiteAlta CasoDeUsoTramiteAlta
+@inject CasoDeUsoTramiteBaja CasoDeUsoTramiteBaja
+@inject CasoDeUsoTramiteModificacion CasoDeUsoTramiteModificacion
+@inject CasoDeUsoTramiteConsultaPorEtiqueta CasoDeUsoConsultaPorEtiqueta
+@inject CasoDeUsoTramiteListado CasoDeUsoTramiteListado
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario 
+@inject CasoDeUsoUsuarioTienePermisos tienePermiso
+@inject NavigationManager Navegador
+
+<DialogoConfirmacion @ref="dialogo" OnConfirmado="Eliminar"/>
+<button class="boton" @onclick= "()=>AgregarTramite()">Agregar Tramite</button>
+<button class="boton" @onclick= "()=>ConsultaEtiquetaTramite()">Consultar</button>
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+
+<table class="table">
+   <thead>
+       <tr>
+           <th>ID</th>
+           <th>EXPEDIENTE ID</th>
+           <th>ETIQUETA</th>
+           <th>CONTENIDO</th>
+           <th>CREACION</th>
+           <th>ULTIMA MODIFICACION</th>
+           <th>ID USUARIO</th>
+       </tr>
+   </thead>
+   <tbody>
+       @foreach (Tramite tra in _listaTramite)                        
+       {
+           <tr>
+               <td class="iden">@tra.ID</td>
+               <td>@tra.ExpedienteID</td>
+               <td>@tra.Etiqueta</td>
+               <td>@tra.Contenido</td>
+               <td>@tra.Creacion</td>
+               <td>@tra.UltimaModificacion</td>
+               <td>@tra.UsuarioID</td>
+               <td>
+                    <button class="boton-modificar" @onclick= "()=>ModificarTramite(tra)">Modificar</button>
+                    <button class="boton-eliminar" @onclick="()=>ConfirmarEliminacion(tra)"> Eliminar</button>
+                </td>
+           </tr>
+       }
+   </tbody>
+</table>
+@code {
+    List<Tramite> _listaTramite = new List<Tramite>();
+    [Parameter] public string? correoActual {get; set;}
+    protected override void OnInitialized()
+    {
+        _listaTramite = CasoDeUsoTramiteListado.Ejecutar();
+    }
+
+    DialogoConfirmacion dialogo = null!;
+    Advertencia advertencia = null!;
+    Tramite? _TramiteParaEliminar = null;
+
+    private void ConfirmarEliminacion(Tramite tra){
+        _TramiteParaEliminar = tra;
+        dialogo.Mensaje = ($"¿Desea eliminar al Expediente {tra.ID} ?");
+        dialogo.Mostrar();
+    }
+
+    void AgregarTramite(){
+        Usuario act = CasoDeUsoDevuelveUsuario.Ejecutar(correoActual);
+        if(tienePermiso.Ejecutar(act.Permisos,Permisos.TramiteAlta)){
+            Navegador.NavigateTo($"agregarTramite{correoActual}"); 
+            _listaTramite = CasoDeUsoTramiteListado.Ejecutar();         //se actualiza la lista
+        }else{
+            advertencia.Mensaje = ("No tenes los permisos para realizar la accion.");
+            advertencia.Mostrar();
+        }
+    }
+
+    void ConsultaEtiquetaTramite(){
+        Navegador.NavigateTo($"consultasTra{correoActual}");
+    }
+
+    void ModificarTramite(Tramite tra){
+        Usuario act = CasoDeUsoDevuelveUsuario.Ejecutar(correoActual);
+        if(tienePermiso.Ejecutar(act.Permisos,Permisos.TramiteModificacion)){
+            Navegador.NavigateTo($"modificarTramite/{tra.ID}/{correoActual}");
+            _listaTramite = CasoDeUsoTramiteListado.Ejecutar();                //se actualiza la lista 
+        }else{
+            advertencia.Mensaje = ("No tenes los permisos para realizar la accion.");
+            advertencia.Mostrar();
+        }
+    }
+
+    private void Eliminar(){
+        if (_TramiteParaEliminar != null)
+        {
+            Usuario act = CasoDeUsoDevuelveUsuario.Ejecutar(correoActual);             //obtiene el usuario que esta operando
+            if(tienePermiso.Ejecutar(act.Permisos,Permisos.TramiteBaja)){
+                 CasoDeUsoTramiteBaja.Ejecutar(_TramiteParaEliminar.ID,act);
+                _listaTramite = CasoDeUsoTramiteListado.Ejecutar();              //se actualiza la lista 
+           }else{
+                advertencia.Mensaje = ("No tenes los permisos para realizar la accion.");
+                advertencia.Mostrar();
+           }  
+        }
+    }
+    void retornoManejo(){
+        Navegador.NavigateTo($"sistemaDeInicio{correoActual}");
+    }
+}

@@ -1,0 +1,67 @@
+@page "/consultasExpe{correo}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+@inject CasoDeUsoExpedienteConsultaPorId CasoDeUsoExpedienteConsultaPorId
+@inject CasoDeUsoExpedienteConsultaTodos CasoDeUsoExpedienteConsultaTodos
+
+
+<Advertencia @ref="dialogo" OnConfirmado="cierra" />
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+<h1>Consultar por Tramites del Expediente ID</h1>
+<input type="number" placeholder="ID del Expediente" @bind="identificacion" class="form-control">
+<button class="boton" @onclick="Aceptar">Aceptar</button>
+
+@if(@muestra){
+    <h2>Lista de Expediente y sus Tramites</h2>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ID EXPEDIENTE</th>
+            <th>ETIQUETA</th>
+            <th>CONTENIDO</th>
+            <th>CREACION</th>
+            <th>ULTIMA MODIFICACION</th>
+            <th>CORREO USUARIO</th>
+         </tr>
+    </thead>
+    <tbody>
+       @foreach (Tramite tra in ListaPorId)                         //lista el expediente con su ID y sus tramites.
+       {
+           <tr>
+               <td class="iden">@tra.ID</td>
+               <td>@tra.ExpedienteID</td>
+                <td>@tra.Etiqueta</td>
+                <td>@tra.Contenido</td>
+                <td>@tra.Creacion</td>
+                <td>@tra.UltimaModificacion</td>
+                 <td>@tra.UsuarioID</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code{
+    int identificacion {get; set;} 
+    List<Tramite>? ListaPorId {get; set;} = new List<Tramite>();
+    [Parameter] public string? correo {get; set;}
+    public bool muestra {get; set;} = false;
+    Advertencia dialogo = null!;
+
+    void Aceptar(){
+        ListaPorId = CasoDeUsoExpedienteConsultaPorId.Ejecutar(identificacion);
+        if(ListaPorId.Count == 0){
+            dialogo.Mensaje = "No hay tramites almacenados para ese expediente";
+            dialogo.Mostrar();
+        }
+        muestra = true;
+    }
+    void cierra(){
+        dialogo.visible = false;
+        Navegador.NavigateTo($"/manejoxpedientes{correo}");
+    }
+    void retornoManejo(){
+        Navegador.NavigateTo($"/manejoexpedientes{correo}");
+    }
+}

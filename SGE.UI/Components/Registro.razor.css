@@ -1,0 +1,27 @@
+.caja_registro{
+    border:10px;
+    border-color: #4d617e;
+    height: max-content;
+    width: max-content;
+    background-color: #4d617e;
+    padding:10px;
+    text-align: center;
+    justify-content: center;
+}
+.boton{
+    margin-top: 10px;
+    width: 400px;
+    background-color: #4d617e;
+}
+.boton:hover{
+    background-color: #121121;
+    color:#ffff;
+}
+h3{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.form-control{
+    width: 400px;
+    font-size: 15px;
+}

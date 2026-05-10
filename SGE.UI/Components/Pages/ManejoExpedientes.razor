@@ -1,0 +1,112 @@
+@page "/manejoexpedientes{correo}"
+@rendermode InteractiveServer
+@inject CasoDeUsoExpedienteAlta CasoDeUsoExpedienteAlta
+@inject CasoDeUsoExpedienteBaja CasoDeUsoExpedienteBaja
+@inject CasoDeUsoExpedienteModificacion CasoDeUsoExpedienteModificacion
+@inject CasoDeUsoExpedienteConsultaTodos CasoDeUsoExpedienteConsultaTodos
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+@inject CasoDeUsoUsuarioTienePermisos tienePermiso
+@inject NavigationManager Navegador
+
+<DialogoConfirmacion @ref="dialogo" OnConfirmado="Eliminar"/>
+<button class="boton" @onclick= "()=>AgregarExpediente()">Agregar Expediente</button>
+<button class="boton" @onclick= "()=>ConsultaExpedienteID()">Consultar</button>
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+
+<table class="table">
+   <thead>
+       <tr>
+           <th>ID</th>
+           <th>ID TRAMITE</th>
+           <th>CARATULA</th>
+           <th>FECHA CREACION</th>
+           <th>ULTIMA MODIFICACION</th>
+           <th>CARATULA</th>
+           <th>ID USUARIO</th>
+           <th>ESTADO</th>
+       </tr>
+   </thead>
+   <tbody>
+       @foreach (var expe in _lista)
+       {
+           <tr>
+               <td class="iden">@expe.ID</td>
+               <td>@expe.TramiteID</td>
+               <td>@expe.Caratula</td>
+               <td>@expe.Creacion</td>
+               <td>@expe.UltimaModificacion</td>
+               <td>@expe.Caratula</td>
+               <td>@expe.UsuarioID</td>
+               <td>@expe.Estado</td>
+               <td>
+                    <button class="boton-modificar" @onclick= "()=>ModificarExpediente(expe)">Modificar</button>
+                    <button class="boton-eliminar" @onclick="()=>ConfirmarEliminacion(expe)"> Eliminar</button>
+                </td>
+           </tr>
+       }
+   </tbody>
+</table>
+@code {
+    List<Expediente> _lista = new List<Expediente>();
+    [Parameter] public string correo {get; set;}
+    protected override void OnInitialized()
+    {
+        _lista = CasoDeUsoExpedienteConsultaTodos.Ejecutar();
+    }
+
+    DialogoConfirmacion dialogo = null!;
+    Expediente? _ExpedienteParaEliminar = null;
+    Advertencia advertencia = null!;
+
+    private void ConfirmarEliminacion(Expediente ex){
+        _ExpedienteParaEliminar = ex;
+        dialogo.Mensaje = ($"¿Desea eliminar al Expediente {ex.ID} ?");
+        dialogo.Mostrar();
+    }
+
+    void AgregarExpediente(){
+        Usuario act = CasoDeUsoDevuelveUsuario.Ejecutar(correo);
+        if(tienePermiso.Ejecutar(act.Permisos,Permisos.ExpedienteAlta)){
+            Navegador.NavigateTo($"/agregarExpediente{correo}");
+            _lista = CasoDeUsoExpedienteConsultaTodos.Ejecutar();                //se actualiza la lista 
+        }else{
+            advertencia.Mensaje = ("No tenes los permisos para realizar la accion.");
+            advertencia.Mostrar();
+        }
+    }
+
+    void ConsultaExpedienteID(){
+        Navegador.NavigateTo($"/consultasExpe{correo}");
+    }
+
+    void ModificarExpediente(Expediente expe){
+        Usuario act = CasoDeUsoDevuelveUsuario.Ejecutar(correo);
+        if(tienePermiso.Ejecutar(act.Permisos,Permisos.ExpedienteModificacion)){
+            Navegador.NavigateTo($"/modificarExpediente/{expe.ID}/{correo}");
+            _lista = CasoDeUsoExpedienteConsultaTodos.Ejecutar();                //se actualiza la lista 
+        }else{
+            advertencia.Mensaje = ("No tenes los permisos para realizar la accion.");
+            advertencia.Mostrar();
+        }
+    }
+
+    private void Eliminar(){
+        if (_ExpedienteParaEliminar.ID != null)
+        {
+             Usuario act = CasoDeUsoDevuelveUsuario.Ejecutar(correo);             //obtiene el usuario que esta operando
+            if(tienePermiso.Ejecutar(act.Permisos,Permisos.ExpedienteBaja)){
+                CasoDeUsoExpedienteBaja.Ejecutar(_ExpedienteParaEliminar.ID,act);
+                _lista = CasoDeUsoExpedienteConsultaTodos.Ejecutar();               //se actualiza la lista 
+           }else{
+                advertencia.Mensaje = ("No tenes los permisos para realizar la accion.");
+                advertencia.Mostrar();
+           }
+        }
+        if(_lista.Count == 0){
+            retornoManejo();
+        }
+    }
+    void retornoManejo(){
+        Navegador.NavigateTo($"/sistemaDeInicio{correo}");
+    }
+}

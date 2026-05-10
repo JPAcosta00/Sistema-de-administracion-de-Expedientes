@@ -1,0 +1,30 @@
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+
+@if(visible)
+{
+    <h3>@Mensaje</h3>
+    <div class="dialogo-contenedor">
+       <div class="dialogo-contenido">
+           <h3>@Mensaje</h3>
+           <button class="boton" @OnClick="Cerrar()">Continuar</button>
+       </div>
+   </div>
+   
+}
+@code{
+    public bool visible = false;
+    [Parameter] public string Mensaje {get;set;}="";
+    [Parameter] public EventCallback OnConfirmado{get;set;}
+
+    public void Mostrar()
+    {
+        visible=true;
+        StateHasChanged();
+    }
+    void Cerrar()
+    {
+        visible=false;
+        OnConfirmado.InvokeAsync();
+    }
+}

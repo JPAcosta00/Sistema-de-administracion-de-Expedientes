@@ -1,0 +1,30 @@
+@page "/agregarTramite{correoUsuario}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador;
+@inject CasoDeUsoTramiteAlta CasoDeUsoTramiteAlta
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+
+<h2>Complete los datos para agregar un Tramite</h2>
+<h6>ID de Expediente</h6>
+<input placeholder="Expediente ID" @bind="_t.ExpedienteID" class="form-control">
+<h6>Etiqueta</h6>
+<input placeholder="Etiqueta" @bind="_t.Etiqueta" class="form-control">
+<h6>Contenido</h6>
+<input placeholder="Contenido" @bind="_t.Contenido" class="form-control">
+<button class="boton" @onclick="Aceptar">Aceptar</button>
+
+@if(_mostrar){
+    <h2>Se agrego el Tramite correctamente</h2>
+}
+
+@code{
+    Tramite _t {get; set;} = new Tramite();
+    bool _mostrar {get; set;} = false;
+    [Parameter] public string? correoUsuario {get; set;}
+    void Aceptar(){
+        Usuario u = CasoDeUsoDevuelveUsuario.Ejecutar(correoUsuario);     //devuelve usuario que esta operando
+        CasoDeUsoTramiteAlta.Ejecutar(_t,u);
+        _mostrar = true;
+        Navegador.NavigateTo($"manejotramites{correoUsuario}");
+    }
+}

@@ -1,0 +1,42 @@
+@page "/registrarse"
+@rendermode InteractiveServer
+@inject CasoDeUsoUsuarioRegistro CasoDeUsoUsuarioRegistro
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+@inject NavigationManager Navegador
+
+<div class="pantalla_registro">
+    <div clas="caja_registro">
+        <h3>Nombre</h3>
+        <input type ="text" placeholder="Nombre" @bind="_U.Nombre" class="form-control">
+        <h3>Apellido</h3>
+         <input type ="text" placeholder="Apellido" @bind="_U.Apellido" class="form-control">
+        <h3>Correo Electronico</h3>
+        <input type ="email" placeholder="Correo Electronico" @bind="_U.Correo" class="form-control">
+        <h3>Contraseña</h3>
+        <input type ="password" placeholder="Contraseña" @bind="_U.Contraseña" class="form-control">
+        <h3>Confirmar Contraseña</h3>
+        <input type ="password" placeholder="Contraseña" @bind="_U.Contraseña" class="form-control">
+        <button class="boton" @onclick="Confirmar">Confirmar</button>
+    </div>
+</div>
+
+
+@if(@error){
+    <h3 >Ya se ha registrado un perfil con el correo @_U.Correo</h3>
+}
+
+@code{
+    Usuario _U = new Usuario();
+    bool error {get; set;} = false;
+
+    void Confirmar(){
+        var u = CasoDeUsoDevuelveUsuario.Ejecutar(_U.Correo);               //checkea que no exista ningun usuario ya registrado con ese correo
+        if(u == null){
+            CasoDeUsoUsuarioRegistro.Ejecutar(_U);
+            Navegador.NavigateTo($"/sistemaDeInicio{_U.Correo}");
+            _U = new Usuario();
+        }else{                                                         
+            error = true;
+        }
+    }
+}

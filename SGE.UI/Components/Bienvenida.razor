@@ -1,0 +1,40 @@
+@page "/sistemaDeInicio{correoActual}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+@inject CasoDeUsoDevuelveAdministrador getAdministrador
+
+<div class="caja_bienvenida">
+    <h1 class="titulo">Sistema de Gestion de Expedientes y Tramites</h1>
+    <header class="menu">
+        <button class="boton" @onclick= "()=>Expedientes()">Manejo de Expedientes</button>
+        <button class="boton" @onclick= "()=>Tramites()">Manejo de Tramites</button>
+        <div class="parte_administrador">
+          @if(@control){
+            <h4>Administrador</h4>
+            <button class="boton" @onclick= "()=>Usuarios()">Gestion de Usuarios</button>
+          }
+        </div>
+    </header>
+</div>
+
+@code{
+    [Parameter] public string? correoActual {get; set;}
+    bool control {get; set; } = false;
+    protected override void OnInitialized(){
+        Usuario? u= CasoDeUsoDevuelveUsuario.Ejecutar(correoActual);
+        Usuario? admin = getAdministrador.Ejecutar();
+        if(u.ID == 8){             //osea es el administrador                                   
+            control = true;
+        }
+    }
+    void Expedientes(){
+        Navegador.NavigateTo($"manejoexpedientes{correoActual}");
+    }
+    void Tramites(){
+        Navegador.NavigateTo($"manejotramites{correoActual}");
+    }
+    void Usuarios(){
+        Navegador.NavigateTo($"manejoDeUsuarios{correoActual}");
+    }
+}

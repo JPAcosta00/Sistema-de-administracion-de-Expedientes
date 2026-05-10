@@ -1,0 +1,39 @@
+@page "/modificarExpediente/{ID:int?}/{correo}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+@inject CasoDeUsoExpedienteModificacion CasoDeUsoExpedienteModificacion
+@inject CasoDeUsoObtenerExpediente CasoDeUsoObtenerExpediente
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+
+<input placeholder="ID" @bind="_E.ID" class="form-control">
+<input placeholder="Tramite ID" @bind="_E.TramiteID" class="form-control">
+<input placeholder="Caratula" @bind="_E.Caratula" class="form-control">
+<input placeholder="Creacion" @bind="_E.Creacion" class="form-control">
+<input placeholder="Ultima Modificacion" @bind="_E.UltimaModificacion" class="form-control">
+<input placeholder="Estado" @bind="_E.Estado" class="form-control">
+<button class="boton" @onclick="Aceptar">Aceptar</button>
+
+@code {
+    Expediente _E = new Expediente();
+    [Parameter] public int? ID { get; set; }
+    [Parameter] public string? correo {get; set;}
+    protected override void OnParametersSet(){
+        if(ID != null){
+                var encontrado = CasoDeUsoObtenerExpediente.Ejecutar(ID.Value);
+                if (encontrado != null){
+                    _E = encontrado;
+                }
+       }
+    }
+   void Aceptar(){
+       Usuario u = CasoDeUsoDevuelveUsuario.Ejecutar(correo);
+       CasoDeUsoExpedienteModificacion.Ejecutar(_E,u);
+       _E = new Expediente();
+       Navegador.NavigateTo($"manejoexpedientes{correo}");
+   }  
+   void retornoManejo(){
+        Navegador.NavigateTo($"manejoexpedientes{correo}");
+    }
+}

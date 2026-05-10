@@ -1,0 +1,26 @@
+@page "/agregarExpediente{correoUsuario}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador;
+@inject CasoDeUsoExpedienteAlta CasoDeUsoExpedienteAlta
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+
+<h2>Complete los datos para agregar un Expediente</h2>
+<h6>ID de tramite</h6>
+<input type="number" placeholder="Tramite ID" @bind="_E.TramiteID" class="form-control">
+<h6>Caratula</h6>
+<input placeholder="Caratula" @bind="_E.Caratula" class="form-control">
+<h6>Estado</h6>
+<input placeholder="RecienIniciado/ParaResolver/ConResolucion/EnNotificacion/Finalizado" @bind="_E.Estado" class="form-control">
+<button class="boton" @onclick="Aceptar">Aceptar</button>
+
+
+@code{
+    Expediente _E = new Expediente();
+    bool _mostrar {get; set;} = false;
+    [Parameter] public string correoUsuario {get; set;}
+    void Aceptar(){
+        Usuario u = CasoDeUsoDevuelveUsuario.Ejecutar(correoUsuario);     //devuelve usuario que esta operando
+        CasoDeUsoExpedienteAlta.Ejecutar(_E,u);
+        Navegador.NavigateTo($"manejoexpedientes{correoUsuario}");
+    }
+}

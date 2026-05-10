@@ -1,0 +1,22 @@
+.boton{
+    width: 350px;
+    height: 50px;
+    background-color: #4d617e;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.boton:hover{
+    background-color: #121121;
+    color:#ffff;
+}
+.tiene{
+    margin-top: 5px;
+}
+.form-control{
+    margin-top: 10px;
+    margin-bottom: 15;
+    width: 350px;
+}
+::placeholder{
+    color: #828283;
+}

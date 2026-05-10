@@ -1,0 +1,57 @@
+@page "/EditarUsuario{correo}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+@inject CasoDeUsoUsuarioModificacion CasoDeUsoUsuarioModificacion
+
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+
+<div class="Datos_Usuario">
+    <h2>Datos del usuario</h2>
+    <input placeholder="Nombre" @bind="_u.Nombre" class="form-control">
+    <input placeholder="Apellido" @bind="_u.Apellido" class="form-control">
+    <input placeholder="Correo Electronico" @bind="_u.Correo" class="form-control">
+    <div class  = "muestra_permisos">
+        <h3>Permisos:</h3>
+         @foreach (var p in _u.Permisos){
+             <h6 class="tiene">@p</h6>
+         }
+        <button class="boton" @onclick="AgregaPermiso">Agregar Permiso</button>
+         @if(@quiereAgregar){
+             <input placeholder="ExpedienteAlta,ExpedienteBaja,ExpedienteModificacion,TramiteAlta,TramiteBaja,TramiteModificacion" @bind="addPermiso" class="form-control">
+             <button class="boton" @onclick="Cerrar">Confirmar</button>
+         }
+    </div>
+    <button class="boton" @onclick="Aceptar">Aceptar</button>
+</div>
+
+@code{
+    [Parameter] public string? correo {get; set;}
+    Usuario? _u = new Usuario();
+    bool quiereAgregar {get; set;} = false;
+    Permisos addPermiso {get; set;}
+
+    protected override void OnParametersSet(){
+        if(correo != null){
+                var encontrado = CasoDeUsoDevuelveUsuario.Ejecutar(correo);
+                if (encontrado != null){
+                    _u = encontrado;
+                }
+       }
+    }
+    void AgregaPermiso(){
+        quiereAgregar = true;
+    }
+    void Cerrar(){
+        quiereAgregar = false;
+        _u.Permisos.Add(addPermiso);
+    }
+    void Aceptar(){
+       CasoDeUsoUsuarioModificacion.Ejecutar(_u);
+       _u = new Usuario();
+       Navegador.NavigateTo($"/manejoDeUsuarios{correo}");
+   } 
+    void retornoManejo(){
+        Navegador.NavigateTo($"/sistemaDeInicio{correo}");
+    }
+}

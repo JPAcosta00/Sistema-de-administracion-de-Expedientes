@@ -1,0 +1,71 @@
+@page "/manejoDeUsuarios{correo}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+@inject CasoDeUsoUsuarioListar CasoDeUsoUsuarioListar
+@inject CasoDeUsoUsuarioModificacion CasoDeUsoUsuarioModificacion
+@inject CasoDeUsoUsuarioBaja CasoDeUsoUsuarioBaja
+
+<DialogoConfirmacion @ref="dialogo" OnConfirmado="Eliminar"/>
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+<table class="table">
+   <thead>
+       <tr>
+           <th>ID</th>
+           <th>NOMBRE</th>
+           <th>APELLIDO</th>
+           <th>CORREO ELECTRONICO</th>
+       </tr>
+   </thead>
+   <tbody>
+       @foreach (var u in _lista)
+       {
+          <tr>
+               <td class="iden">@u.ID</td>
+               <td>@u.Nombre</td>
+               <td>@u.Apellido</td>
+               <td>@u.Correo</td>
+               <td>
+                    <button class="boton-modificar" @onclick= "()=>ModificarUsuario(u)">Modificar</button>
+                    <button class="boton-eliminar" @onclick="()=>ConfirmarEliminacion(u)"> Eliminar</button>
+                </td>
+           </tr>
+       }
+   </tbody>
+</table>
+
+
+@code{
+    List<Usuario> _lista {get; set;}
+    [Parameter] public string? correo {get; set;}
+    DialogoConfirmacion dialogo = null;
+    Advertencia advertencia = null;
+    Usuario? _ParaEliminar = new Usuario();
+
+    protected override void OnInitialized()
+    {
+        _lista = CasoDeUsoUsuarioListar.Ejecutar();
+    }
+
+    private void ConfirmarEliminacion(Usuario us){
+        _ParaEliminar = us;
+        dialogo.Mensaje = $"¿Desea eliminar al Expediente {us.Correo} ?";
+        dialogo.Mostrar();
+    }
+
+    private void Eliminar(){
+        if (_ParaEliminar.ID != null)
+        {
+            CasoDeUsoUsuarioBaja.Ejecutar(_ParaEliminar.Correo);
+            _lista = CasoDeUsoUsuarioListar.Ejecutar();               //se actualiza la lista 
+        }
+    }
+
+    void ModificarUsuario(Usuario us){
+        Navegador.NavigateTo($"/EditarUsuario{us.Correo}");
+        _lista = CasoDeUsoUsuarioListar.Ejecutar();                   //actualiza la lista
+    }
+
+    void retornoManejo(){
+        Navegador.NavigateTo($"/sistemaDeInicio{correo}");
+    }
+}

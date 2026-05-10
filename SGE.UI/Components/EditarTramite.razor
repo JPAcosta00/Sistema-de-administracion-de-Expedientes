@@ -1,0 +1,38 @@
+@page "/modificarTramite/{ID:int?}/{correo}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador;
+@inject CasoDeUsoTramiteModificacion CasoDeUsoTramiteModificacion
+@inject CasoDeUsoObtenerTramite CasoDeUsoObtenerTramite
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+
+<input placeholder="ID" @bind="_t.ID" class="form-control">
+<input placeholder="Expediente ID" @bind="_t.ExpedienteID" class="form-control">
+<input placeholder="Etiqueta" @bind="_t.Etiqueta" class="form-control">
+<input placeholder="Contenido" @bind="_t.Contenido" class="form-control">
+<input placeholder="Ultima Modificacion" @bind="_t.UltimaModificacion" class="form-control">
+<button class="boton" @onclick="Aceptar">Aceptar</button>
+
+@code {
+    Tramite _t = new Tramite();
+    [Parameter] public int? ID { get; set; }
+    [Parameter] public string? correo {get; set;}
+    protected override void OnParametersSet(){
+        if(ID != null){
+                Tramite encontrado = CasoDeUsoObtenerTramite.Ejecutar(ID.Value);
+                if (encontrado != null){
+                    _t = encontrado;
+                }
+       }
+    }
+   void Aceptar(){
+       Usuario  u = CasoDeUsoDevuelveUsuario.Ejecutar(correo);
+        CasoDeUsoTramiteModificacion.Ejecutar(_t, u);
+       _t = new Tramite();
+       Navegador.NavigateTo($"/manejotramites{correo}");
+   }  
+   void retornoManejo(){
+        Navegador.NavigateTo($"manejotramites{correo}");
+    }
+}

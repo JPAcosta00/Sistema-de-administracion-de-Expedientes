@@ -1,0 +1,43 @@
+@page "/"
+@rendermode InteractiveServer
+@inject CasoDeUsoInicioSesion CasoDeUsoInicioSesion
+@inject NavigationManager Navegador
+
+<h1 class="fondo">SISTEMA DE GESTION DE EXPEDIENTES Y TRAMITES</h1>
+<h3 class="fondo">ACOSTA JUAN PABLO</h3>
+<Advertencia @ref="error" />
+<div class="caja_inicio">
+    <div class="caja_sesion">
+        <h3>Iniciar Sesion</h3>
+        <input type ="email" placeholder="Correo Electronido" @bind="_correo" class="form-control">
+        <input type ="password" placeholder="Contraseña" @bind="_contraseña" class="form-control">
+        <button class="boton" @onclick="Confirmar">Confirmar</button>
+    </div>
+    <div class="caja_registro">
+        <h5>¿No tenes una cuenta?</h5>
+        <button class="boton" @onclick="()=>NuevoRegistro()">Registrarse</button>
+    </div>
+</div>
+
+
+@code{
+    public string? _correo {get; set;}
+    public string? _contraseña {get; set;}
+    public bool control {get; set;} = false;
+    Advertencia error = null!;
+
+    private void Confirmar()
+    {
+        control = CasoDeUsoInicioSesion.Ejecutar(_correo, _contraseña);
+        if (!control){
+            error.Mensaje = $"Error al iniciar sesion";
+            error.Mostrar();
+        }else{
+            Navegador.NavigateTo($"sistemaDeInicio{_correo}");
+        }
+    }
+
+    private void NuevoRegistro(){
+        Navegador.NavigateTo("/registrarse");
+    }
+}

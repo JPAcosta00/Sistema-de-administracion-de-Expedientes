@@ -1,0 +1,66 @@
+@page "/consultasTra{correo}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+@inject CasoDeUsoTramiteConsultaPorEtiqueta CasoDeUsoTramiteConsultaPorEtiqueta
+
+<Advertencia @ref="dialogo" OnConfirmado="cierra"/>
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+<h1>Consultar por Tramites por etiqueta</h1>
+<input placeholder="Etiqueta de un tramite" @bind="Et" class="form-control">
+<button class="boton" @onclick="Aceptar">Aceptar</button>
+
+
+@if(@muestra){ 
+    <h2>Lista de Tramites</h2>
+    <table class="table">
+   <thead>
+       <tr>
+           <th>ID</th>
+           <th>EXPEDIENTE ID</th>
+           <th>ETIQUETA</th>
+           <th>CONTENIDO</th>
+           <th>CREACION</th>
+           <th>ULTIMA MODIFICACION</th>
+           <th>CORREO USUARIO</th>
+       </tr>
+   </thead>
+   <tbody>
+       @foreach (Tramite tra in ListaPorEtiqueta)                         //lista el expediente con su ID y sus tramites.
+       {
+           <tr>
+               <td class="iden">@tra.ID</td>
+               <td>@tra.ExpedienteID</td>
+               <td>@tra.Etiqueta</td>
+               <td>@tra.Contenido</td>
+               <td>@tra.Creacion</td>
+               <td>@tra.UltimaModificacion</td>
+               <td>@tra.UsuarioID</td>
+           </tr>
+       }
+   </tbody>
+  </table>
+}
+
+@code{
+    EtiquetaTramite Et {get; set;} 
+    List<Tramite>? ListaPorEtiqueta {get; set;}
+    [Parameter] public string? correo {get; set;}
+    public bool muestra {get; set;} = false;
+    Advertencia dialogo = null!;
+
+    void Aceptar(){
+        ListaPorEtiqueta = CasoDeUsoTramiteConsultaPorEtiqueta.Ejecutar(Et);
+        if(ListaPorEtiqueta.Count == 0){
+            dialogo.Mensaje = "No hay tramites almacenados con esa etiqueta" ;
+            dialogo.Mostrar();
+        }
+        muestra = true;
+    }
+    void cierra(){
+        dialogo.visible = false;
+        Navegador.NavigateTo($"/manejotramites{correo}");
+    }
+    void retornoManejo(){
+        Navegador.NavigateTo($"/manejotramites{correo}");
+    }
+}

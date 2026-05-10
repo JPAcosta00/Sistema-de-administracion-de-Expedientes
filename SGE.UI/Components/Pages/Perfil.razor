@@ -1,0 +1,28 @@
+@page "/perfil{correo}"
+@rendermode InteractiveServer
+@inject NavigationManager Navegador
+@inject CasoDeUsoDevuelveUsuario CasoDeUsoDevuelveUsuario
+
+<button class="boton" @onclick= "()=>retornoManejo()">Volver</button>
+
+<div class="Datos_Usuario">
+    <input placeholder="Nombre" @bind="_actual.Nombre" class="form-control">
+    <input placeholder="Apellido" @bind="_actual.Apellido" class="form-control">
+    <input placeholder="Correo Electronico" @bind="_actual.Correo" class="form-control">
+    <h2>Permisos </h2>
+         @foreach (var p in _actual.Permisos){
+             <h4>@p </h4><br>
+         }
+</div>
+
+@code{
+    [Parameter] public string? correo {get; set;}
+    public Usuario? _actual {get; set;} 
+    
+    protected override void OnInitialized(){
+        _actual = CasoDeUsoDevuelveUsuario.Ejecutar(correo);
+    }
+    void retornoManejo(){
+        Navegador.NavigateTo($"/sistemaDeInicio{correo}");
+    }
+}

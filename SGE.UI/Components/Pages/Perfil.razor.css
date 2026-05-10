@@ -1,0 +1,11 @@
+.boton{
+    width: 360px;
+    background-color: #4d617e;
+}
+.boton:hover{
+    background-color: #121121;
+    color:#ffff;
+}
+.form-control{
+    width: 550px;
+}
