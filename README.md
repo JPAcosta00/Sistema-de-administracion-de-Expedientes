@@ -12,4 +12,4 @@ Sistema integral desarrollado en **.NET (C#)** para la gestión eficiente de tr�
 * Sistema de login.
 * Código organizado por capas para facilitar el testeo y mantenimiento.
 
-## 🚀 [Ver Demo en Vivo](https://tu-proyecto.up.railway.app](https://sistema-de-administracion-de-expedientes-production.up.railway.app/))
+### 🚀 [Ver Demo en Vivo](https://sistema-de-administracion-de-expedientes-production.up.railway.app/)
