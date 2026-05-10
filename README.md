@@ -11,3 +11,5 @@ Sistema integral desarrollado en **.NET (C#)** para la gestión eficiente de tr�
 * Gestión completa del ciclo de vida de expedientes.
 * Sistema de login.
 * Código organizado por capas para facilitar el testeo y mantenimiento.
+
+## 🚀 [Ver Demo en Vivo](https://tu-proyecto.up.railway.app](https://sistema-de-administracion-de-expedientes-production.up.railway.app/))
