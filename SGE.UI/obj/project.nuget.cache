@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uvYYm6KYn8JL5jAOlMRafpM7Pcf8495FwEJIVjKEYaFr51R8gYjZOqYq4GEAqrOr40cYxrT7ztEydFsA+235JA==",
+  "dgSpecHash": "bHGctdqWgma3LYRg9m+uKkDWRpYDZu9eaHesuatL2aT476bPdgBONYPjC/UNf5/1PUMzN8tNhLJQxDN2A0vmRg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\SGE.UI.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\SGE.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.6\\microsoft.data.sqlite.core.8.0.6.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.6\\microsoft.entityframeworkcore.8.0.6.nupkg.sha512",

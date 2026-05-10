@@ -1,0 +1,769 @@
+/* _content/SGE.UI/Components/Advertencia.razor.rz.scp.css */
+.dialogo-contenedor[b-p73zye9qfm] {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton[b-p73zye9qfm]{
+    width: max-content;
+    margin: auto;
+    background-color: #4d617e;
+}
+.boton:hover[b-p73zye9qfm]{
+    background-color: #121121;
+    color:#ffff;
+}
+.dialogo-contenido[b-p73zye9qfm]{
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+/* _content/SGE.UI/Components/AgregarExpediente.razor.rz.scp.css */
+h2[b-7zh8sxek7w]{
+    font-size: 35px;
+    font-weight: bold; 
+}
+h6[b-7zh8sxek7w]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.form-control[b-7zh8sxek7w]{
+    width: 550px;
+}
+[b-7zh8sxek7w]::placeholder{
+    color: rgb(85, 84, 84);
+}
+.boton[b-7zh8sxek7w]{
+    margin-top: 15px;
+    width: 300px;
+    height: 50px;
+    background-color: #4d617e;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.boton:hover[b-7zh8sxek7w]{
+    background-color: #121121;
+    color:#ffff;
+}
+/* _content/SGE.UI/Components/AgregarTramite.razor.rz.scp.css */
+h2[b-d7hfluvcpe]{
+    font-size: 35px;
+    font-weight: bold; 
+}
+h6[b-d7hfluvcpe]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.form-control[b-d7hfluvcpe]{
+    width: 550px;
+}
+[b-d7hfluvcpe]::placeholder{
+    color: rgb(85, 84, 84);
+}
+.boton[b-d7hfluvcpe]{
+    margin-top: 15px;
+    width: 300px;
+    height: 50px;
+    background-color: #4d617e;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.boton:hover[b-d7hfluvcpe]{
+    background-color: #121121;
+    color:#ffff;
+}
+/* _content/SGE.UI/Components/Bienvenida.razor.rz.scp.css */
+.caja_bienvenida[b-p6k07roij4]{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: max-content;
+    margin-top: 85px;
+    margin-left: 100px;
+    padding: 40px;
+    box-shadow: -24px -13px 39px 2px rgba(0,0,0,1);
+    border-radius: 7px;
+    border: 8px outset #4d617e;
+}
+.boton[b-p6k07roij4]{
+    width: 300px;
+    height: 50px;
+    background-color: #4d617e;
+    border-radius: 2px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.boton:hover[b-p6k07roij4]{
+    background-color: #121121;
+    color:#ffff;
+}
+.parte_administrador[b-p6k07roij4]{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: max-content;
+    margin-top: 25px;
+    margin-left: 154px;
+}
+h4[b-p6k07roij4]{
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: bold; 
+}
+.titulo[b-p6k07roij4]{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* _content/SGE.UI/Components/ConsultasExpediente.razor.rz.scp.css */
+.boton[b-avh2rmy8vz]{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.boton:hover[b-avh2rmy8vz]{
+    background-color: #121121;
+    color:#ffff;
+}
+.iden[b-avh2rmy8vz]{
+    font-weight: bold; 
+    font-size: 18px;
+}
+th[b-avh2rmy8vz]{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: 80px;
+    background-color: #7e8185;
+}
+td[b-avh2rmy8vz]{
+    border: 2px solid #000000;
+}
+.form-control[b-avh2rmy8vz]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* _content/SGE.UI/Components/ConsultasTramite.razor.rz.scp.css */
+.boton[b-e711vl8phc]{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.boton:hover[b-e711vl8phc]{
+    background-color: #121121;
+    color:#ffff;
+}
+.iden[b-e711vl8phc]{
+    font-weight: bold; 
+    font-size: 18px;
+}
+th[b-e711vl8phc]{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: 80px;
+    background-color: #7e8185;
+}
+td[b-e711vl8phc]{
+    border: 2px solid #000000;
+}
+.form-control[b-e711vl8phc]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* _content/SGE.UI/Components/DialogoConfirmacion.razor.rz.scp.css */
+.dialogo-contenedor[b-uz9ff9pls7] {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dialogo-contenido[b-uz9ff9pls7]{
+    width: 80%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.boton[b-uz9ff9pls7]{
+    width: max-content;
+    margin:auto;
+    background-color: #4d617e;
+}
+.boton:hover[b-uz9ff9pls7]{
+    background-color: #121121;
+    color:#ffff;
+}
+/* _content/SGE.UI/Components/EditarExpediente.razor.rz.scp.css */
+.boton[b-u8tc7utkxe]{
+    width: 350px;
+    height: 50px;
+    background-color: #4d617e;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.boton:hover[b-u8tc7utkxe]{
+    background-color: #121121;
+    color:#ffff;
+}
+.form-control[b-u8tc7utkxe]{
+    margin-top: 10px;
+    margin-bottom: 15;
+    width: 350px;
+}
+/* _content/SGE.UI/Components/EditarTramite.razor.rz.scp.css */
+.boton[b-xhbgzki0a6]{
+    width: 350px;
+    height: 50px;
+    background-color: #4d617e;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.boton:hover[b-xhbgzki0a6]{
+    background-color: #121121;
+    color:#ffff;
+}
+.form-control[b-xhbgzki0a6]{
+    margin-top: 10px;
+    margin-bottom: 15;
+    width: 350px;
+}
+/* _content/SGE.UI/Components/EditarUsuario.razor.rz.scp.css */
+.boton[b-rd33ktr2ff]{
+    width: 350px;
+    height: 50px;
+    background-color: #4d617e;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.boton:hover[b-rd33ktr2ff]{
+    background-color: #121121;
+    color:#ffff;
+}
+.tiene[b-rd33ktr2ff]{
+    margin-top: 5px;
+}
+.form-control[b-rd33ktr2ff]{
+    margin-top: 10px;
+    margin-bottom: 15;
+    width: 350px;
+}
+[b-rd33ktr2ff]::placeholder{
+    color: #828283;
+}
+/* _content/SGE.UI/Components/Layout/MainLayout.razor.rz.scp.css */
+.page[b-k716zha75e] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-k716zha75e] {
+    flex: 1;
+}
+
+.sidebar[b-k716zha75e] {
+    background-color: #4d617e;
+}
+
+.top-row[b-k716zha75e] {
+    background-color: #121121;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-k716zha75e]  a, .top-row[b-k716zha75e]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-k716zha75e]  a:hover, .top-row[b-k716zha75e]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-k716zha75e]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-k716zha75e] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-k716zha75e]  a, .top-row[b-k716zha75e]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-k716zha75e] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-k716zha75e] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-k716zha75e] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-k716zha75e]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-k716zha75e], article[b-k716zha75e] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+#blazor-error-ui[b-k716zha75e] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-k716zha75e] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/SGE.UI/Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-067s78a2ky] {
+    appearance: none;
+    cursor: pointer;
+    width: 85px;
+    height: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler:checked[b-067s78a2ky] {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top-row[b-067s78a2ky] {
+    height: 3.5rem;
+    background-color: #121121;
+}
+
+.navbar-brand[b-067s78a2ky] {
+    font-size: 1.1rem;
+}
+
+.bi[b-067s78a2ky] {
+    display: inline-block;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+    top: -1px;
+    background-size: cover;
+}
+
+.bi-house-door-fill-nav-menu[b-067s78a2ky] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-house-door-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z'/%3E%3C/svg%3E");
+}
+
+.bi-plus-square-fill-nav-menu[b-067s78a2ky] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus-square-fill' viewBox='0 0 16 16'%3E%3Cpath d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z'/%3E%3C/svg%3E");
+}
+
+.bi-list-nested-nav-menu[b-067s78a2ky] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-list-nested' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E");
+}
+
+.nav-item[b-067s78a2ky] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-067s78a2ky] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-067s78a2ky] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-067s78a2ky]  .nav-link {
+        color: #d7d7d7;
+        background: none;
+        border: none;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        width: 100%;
+    }
+
+.nav-item[b-067s78a2ky]  a.active {
+    background-color: rgba(255,255,255,0.37);
+    color: white;
+}
+
+.nav-item[b-067s78a2ky]  .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.nav-scrollable[b-067s78a2ky] {
+    display: none;
+}
+
+.navbar-toggler:checked ~ .nav-scrollable[b-067s78a2ky] {
+    display: block;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-067s78a2ky] {
+        display: none;
+    }
+
+    .nav-scrollable[b-067s78a2ky] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}
+.boton[b-067s78a2ky]{
+    width: 200px;
+    height: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 15px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.boton:hover[b-067s78a2ky]{
+    background-color: #121121;
+    color:#ffff;
+}
+.caja_alumno[b-067s78a2ky]{
+    margin-top: 100%;
+    margin-left: 10px;
+    background-color: #121121;
+    border-radius: 3px;
+    padding: 15px;
+    color:#ffff;
+    text-align: center;
+    width: max-content;
+    height: max-content;
+}
+.datos_alumno[b-067s78a2ky]{
+    font-weight: bold;
+    margin: 3px;
+}
+/* _content/SGE.UI/Components/Pages/Inicio.razor.rz.scp.css */
+.caja_sesion[b-fw8lfjflwn]{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: max-content;
+    width: 400px;
+    margin-bottom: 20px;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+}
+.form-control[b-fw8lfjflwn]{
+    margin-bottom: 15px;
+}
+[b-fw8lfjflwn]::placeholder{
+    color:#5a5a5a;
+}
+
+.boton[b-fw8lfjflwn]{
+    width: 360px;
+    background-color: #4d617e;
+}
+.boton:hover[b-fw8lfjflwn]{
+    background-color: #121121;
+    color:#ffff;
+}
+.caja_registro[b-fw8lfjflwn]{
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: max-content;
+    width: max-content;
+    padding: 20px;
+    text-align: center;
+}
+.fondo[b-fw8lfjflwn]{
+    filter: blur(4px);
+}
+.caja_inicio[b-fw8lfjflwn]{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h3[b-fw8lfjflwn]{
+    font-weight: bold;
+}
+/* _content/SGE.UI/Components/Pages/ManejoExpedientes.razor.rz.scp.css */
+.boton[b-b0qe8sscsh]{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.iden[b-b0qe8sscsh]{
+    font-weight: bold; 
+    font-size: 18px;
+}
+.boton:hover[b-b0qe8sscsh]{
+    background-color: #121121;
+    color:#ffff;
+}
+th[b-b0qe8sscsh]{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: 100px;
+    background-color: #7e8185;
+}
+td[b-b0qe8sscsh]{
+    border: 2px solid #000000;
+    padding: 10px;
+}
+.boton-eliminar[b-b0qe8sscsh]{
+    color:#ffff;
+    background-color: #e23131;
+    margin:5px;
+    padding:auto;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-eliminar:hover[b-b0qe8sscsh]{
+    background-color: #6a1717;
+}
+.boton-modificar[b-b0qe8sscsh]{
+    margin:5px;
+    padding:auto;
+    color:#ffff;
+    background-color: #366cbc;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-modificar:hover[b-b0qe8sscsh]{
+    background-color: #1f3e6c;
+
+}
+/* _content/SGE.UI/Components/Pages/ManejoTramites.razor.rz.scp.css */
+.boton[b-n4n7k0a2kk]{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.boton:hover[b-n4n7k0a2kk]{
+    background-color: #121121;
+    color:#ffff;
+}
+th[b-n4n7k0a2kk]{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: 100px;
+    background-color: #7e8185;
+}
+.iden[b-n4n7k0a2kk]{
+    font-weight: bold; 
+    font-size: 18px;
+}
+td[b-n4n7k0a2kk]{
+    border: 2px solid #000000;
+    padding: 10px;
+}
+.boton-eliminar[b-n4n7k0a2kk]{
+    color:#ffff;
+    background-color: #e23131;
+    margin:5px;
+    padding:auto;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-eliminar:hover[b-n4n7k0a2kk]{
+    background-color: #6a1717;
+}
+.boton-modificar[b-n4n7k0a2kk]{
+    margin:5px;
+    padding:auto;
+    color:#ffff;
+    background-color: #366cbc;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-modificar:hover[b-n4n7k0a2kk]{
+    background-color: #1f3e6c;
+
+}
+/* _content/SGE.UI/Components/Pages/ManejoUsuarios.razor.rz.scp.css */
+.boton[b-ztjs4g9dp0]{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.boton:hover[b-ztjs4g9dp0]{
+    background-color: #121121;
+    color:#ffff;
+}
+th[b-ztjs4g9dp0]{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: max-content;
+    background-color: #7e8185;
+}
+td[b-ztjs4g9dp0]{
+    border: 2px solid #000000;
+}
+.iden[b-ztjs4g9dp0]{
+    font-weight: bold; 
+    font-size: 18px;
+}
+.boton-eliminar[b-ztjs4g9dp0]{
+    color:#ffff;
+    background-color: #e23131;
+    margin:5px;
+    padding:auto;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-eliminar:hover[b-ztjs4g9dp0]{
+    background-color: #6a1717;
+}
+.boton-modificar[b-ztjs4g9dp0]{
+    margin:5px;
+    padding:auto;
+    color:#ffff;
+    background-color: #366cbc;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-modificar:hover[b-ztjs4g9dp0]{
+    background-color: #1f3e6c;
+
+}
+/* _content/SGE.UI/Components/Pages/Perfil.razor.rz.scp.css */
+.boton[b-h9u1s26gcg]{
+    width: 360px;
+    background-color: #4d617e;
+}
+.boton:hover[b-h9u1s26gcg]{
+    background-color: #121121;
+    color:#ffff;
+}
+.form-control[b-h9u1s26gcg]{
+    width: 550px;
+}
+/* _content/SGE.UI/Components/Registro.razor.rz.scp.css */
+.caja_registro[b-io0pgagxnl]{
+    border:10px;
+    border-color: #4d617e;
+    height: max-content;
+    width: max-content;
+    background-color: #4d617e;
+    padding:10px;
+    text-align: center;
+    justify-content: center;
+}
+.boton[b-io0pgagxnl]{
+    margin-top: 10px;
+    width: 400px;
+    background-color: #4d617e;
+}
+.boton:hover[b-io0pgagxnl]{
+    background-color: #121121;
+    color:#ffff;
+}
+h3[b-io0pgagxnl]{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.form-control[b-io0pgagxnl]{
+    width: 400px;
+    font-size: 15px;
+}

@@ -1,0 +1,53 @@
+.caja_sesion[b-fw8lfjflwn]{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: max-content;
+    width: 400px;
+    margin-bottom: 20px;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+}
+.form-control[b-fw8lfjflwn]{
+    margin-bottom: 15px;
+}
+[b-fw8lfjflwn]::placeholder{
+    color:#5a5a5a;
+}
+
+.boton[b-fw8lfjflwn]{
+    width: 360px;
+    background-color: #4d617e;
+}
+.boton:hover[b-fw8lfjflwn]{
+    background-color: #121121;
+    color:#ffff;
+}
+.caja_registro[b-fw8lfjflwn]{
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    height: max-content;
+    width: max-content;
+    padding: 20px;
+    text-align: center;
+}
+.fondo[b-fw8lfjflwn]{
+    filter: blur(4px);
+}
+.caja_inicio[b-fw8lfjflwn]{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h3[b-fw8lfjflwn]{
+    font-weight: bold;
+}

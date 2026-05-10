@@ -1,0 +1,52 @@
+.boton[b-b0qe8sscsh]{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.iden[b-b0qe8sscsh]{
+    font-weight: bold; 
+    font-size: 18px;
+}
+.boton:hover[b-b0qe8sscsh]{
+    background-color: #121121;
+    color:#ffff;
+}
+th[b-b0qe8sscsh]{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: 100px;
+    background-color: #7e8185;
+}
+td[b-b0qe8sscsh]{
+    border: 2px solid #000000;
+    padding: 10px;
+}
+.boton-eliminar[b-b0qe8sscsh]{
+    color:#ffff;
+    background-color: #e23131;
+    margin:5px;
+    padding:auto;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-eliminar:hover[b-b0qe8sscsh]{
+    background-color: #6a1717;
+}
+.boton-modificar[b-b0qe8sscsh]{
+    margin:5px;
+    padding:auto;
+    color:#ffff;
+    background-color: #366cbc;
+    height: 40px;
+    width: 80px;
+    border-radius: 3px;
+}
+.boton-modificar:hover[b-b0qe8sscsh]{
+    background-color: #1f3e6c;
+
+}

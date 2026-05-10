@@ -1,0 +1,28 @@
+h2[b-d7hfluvcpe]{
+    font-size: 35px;
+    font-weight: bold; 
+}
+h6[b-d7hfluvcpe]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.form-control[b-d7hfluvcpe]{
+    width: 550px;
+}
+[b-d7hfluvcpe]::placeholder{
+    color: rgb(85, 84, 84);
+}
+.boton[b-d7hfluvcpe]{
+    margin-top: 15px;
+    width: 300px;
+    height: 50px;
+    background-color: #4d617e;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.boton:hover[b-d7hfluvcpe]{
+    background-color: #121121;
+    color:#ffff;
+}

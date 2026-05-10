@@ -1,0 +1,27 @@
+.caja_registro[b-io0pgagxnl]{
+    border:10px;
+    border-color: #4d617e;
+    height: max-content;
+    width: max-content;
+    background-color: #4d617e;
+    padding:10px;
+    text-align: center;
+    justify-content: center;
+}
+.boton[b-io0pgagxnl]{
+    margin-top: 10px;
+    width: 400px;
+    background-color: #4d617e;
+}
+.boton:hover[b-io0pgagxnl]{
+    background-color: #121121;
+    color:#ffff;
+}
+h3[b-io0pgagxnl]{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.form-control[b-io0pgagxnl]{
+    width: 400px;
+    font-size: 15px;
+}

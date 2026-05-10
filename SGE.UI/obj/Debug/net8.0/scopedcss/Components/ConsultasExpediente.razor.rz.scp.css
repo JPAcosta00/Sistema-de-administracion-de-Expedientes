@@ -1,0 +1,30 @@
+.boton[b-avh2rmy8vz]{
+    width: max-content;
+    background-color: #4d617e;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:#ffff;
+    margin-bottom: 10px;
+}
+.boton:hover[b-avh2rmy8vz]{
+    background-color: #121121;
+    color:#ffff;
+}
+.iden[b-avh2rmy8vz]{
+    font-weight: bold; 
+    font-size: 18px;
+}
+th[b-avh2rmy8vz]{
+    font-size: 15px;
+    border: 2px solid #000000;
+    width: 80px;
+    background-color: #7e8185;
+}
+td[b-avh2rmy8vz]{
+    border: 2px solid #000000;
+}
+.form-control[b-avh2rmy8vz]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

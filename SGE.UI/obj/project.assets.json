@@ -1227,11 +1227,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\SGE.UI.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\SGE.UI.csproj",
       "projectName": "SGE.UI",
-      "projectPath": "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\SGE.UI.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\SGE.UI.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1246,11 +1246,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
-              "projectPath": "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+            "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
             },
-            "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Repositorios\\SGE.Repositorios.csproj": {
-              "projectPath": "c:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Repositorios\\SGE.Repositorios.csproj"
+            "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Repositorios\\SGE.Repositorios.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\JP\\Facultad\\3ER AÑO\\1ER SEMESTRE\\Seminario de Lenguajes (.NET)\\TrabajoPractico entrega final\\AcostaJuanPablo\\TrabajoPractico\\SGE.Repositorios\\SGE.Repositorios.csproj"
             }
           }
         }
