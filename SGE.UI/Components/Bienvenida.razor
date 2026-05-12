@@ -10,7 +10,7 @@
         <button class="boton" @onclick= "()=>Expedientes()">Manejo de Expedientes</button>
         <button class="boton" @onclick= "()=>Tramites()">Manejo de Tramites</button>
         <div class="parte_administrador">
-          @if(@control){
+          @if(control){
             <h4>Administrador</h4>
             <button class="boton" @onclick= "()=>Usuarios()">Gestion de Usuarios</button>
           }
@@ -21,12 +21,20 @@
 @code{
     [Parameter] public string? correoActual {get; set;}
     bool control {get; set; } = false;
-    protected override void OnInitialized(){
-        Usuario? u= CasoDeUsoDevuelveUsuario.Ejecutar(correoActual);
-        Usuario? admin = getAdministrador.Ejecutar();
-        if(u.ID == 8){             //osea es el administrador                                   
-            control = true;
+    protected override void OnInitialized() {
+        // 1. Verificamos que el correo no sea nulo antes de buscar
+        if (!string.IsNullOrEmpty(correoActual)) 
+        {
+            Usuario? u = CasoDeUsoDevuelveUsuario.Ejecutar(correoActual);
+
+            // 2. Usamos el operador ? para evitar que explote si u es null
+            // Verificamos si es el ID 1 (el admin)
+            if (u?.ID == 1) 
+            {
+                control = true;
+            }
         }
+        // Nota: Si u es null o el ID no es 1, 'control' seguirá siendo false por defecto.
     }
     void Expedientes(){
         Navegador.NavigateTo($"manejoexpedientes{correoActual}");

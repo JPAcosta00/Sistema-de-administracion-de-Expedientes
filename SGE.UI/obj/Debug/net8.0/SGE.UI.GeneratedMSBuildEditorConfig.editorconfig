@@ -9,103 +9,103 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SGE.UI
 build_property.RootNamespace = SGE.UI
-build_property.ProjectDir = c:\Users\USUARIO\OneDrive\Escritorio\JP\Facultad\3ER AÑO\1ER SEMESTRE\Seminario de Lenguajes (.NET)\TrabajoPractico entrega final\AcostaJuanPablo\TrabajoPractico\SGE.UI\
+build_property.ProjectDir = C:\Users\USUARIO\OneDrive\Escritorio\JP\Facultad\3ER AÑO\1ER SEMESTRE\Seminario de Lenguajes (.NET)\TrabajoPractico entrega final\AcostaJuanPablo\TrabajoPractico\SGE.UI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\USUARIO\OneDrive\Escritorio\JP\Facultad\3ER AÑO\1ER SEMESTRE\Seminario de Lenguajes (.NET)\TrabajoPractico entrega final\AcostaJuanPablo\TrabajoPractico\SGE.UI
+build_property.MSBuildProjectDirectory = C:\Users\USUARIO\OneDrive\Escritorio\JP\Facultad\3ER AÑO\1ER SEMESTRE\Seminario de Lenguajes (.NET)\TrabajoPractico entrega final\AcostaJuanPablo\TrabajoPractico\SGE.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/App.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Error.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Weather.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Routes.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/_Imports.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Advertencia.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Advertencia.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZHZlcnRlbmNpYS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-p73zye9qfm
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/AgregarExpediente.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/AgregarExpediente.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZ3JlZ2FyRXhwZWRpZW50ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-7zh8sxek7w
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/AgregarTramite.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/AgregarTramite.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZ3JlZ2FyVHJhbWl0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-d7hfluvcpe
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Bienvenida.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Bienvenida.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCaWVudmVuaWRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-p6k07roij4
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/ConsultasExpediente.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/ConsultasExpediente.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb25zdWx0YXNFeHBlZGllbnRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-avh2rmy8vz
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/ConsultasTramite.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/ConsultasTramite.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb25zdWx0YXNUcmFtaXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-e711vl8phc
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/DialogoConfirmacion.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/DialogoConfirmacion.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFsb2dvQ29uZmlybWFjaW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-uz9ff9pls7
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/EditarExpediente.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/EditarExpediente.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xFZGl0YXJFeHBlZGllbnRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-u8tc7utkxe
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/EditarTramite.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/EditarTramite.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xFZGl0YXJUcmFtaXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-xhbgzki0a6
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/EditarUsuario.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/EditarUsuario.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xFZGl0YXJVc3VhcmlvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-rd33ktr2ff
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Layout/MainLayout.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-k716zha75e
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Layout/NavMenu.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-067s78a2ky
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Inicio.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Inicio.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbmljaW8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-fw8lfjflwn
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/ManejoExpedientes.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/ManejoExpedientes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYW5lam9FeHBlZGllbnRlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-b0qe8sscsh
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/ManejoTramites.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/ManejoTramites.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYW5lam9UcmFtaXRlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-n4n7k0a2kk
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/ManejoUsuarios.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/ManejoUsuarios.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYW5lam9Vc3Vhcmlvcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-ztjs4g9dp0
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Perfil.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Pages/Perfil.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQZXJmaWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-h9u1s26gcg
 
-[c:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Registro.razor]
+[C:/Users/USUARIO/OneDrive/Escritorio/JP/Facultad/3ER AÑO/1ER SEMESTRE/Seminario de Lenguajes (.NET)/TrabajoPractico entrega final/AcostaJuanPablo/TrabajoPractico/SGE.UI/Components/Registro.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZWdpc3Ryby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-io0pgagxnl

@@ -42,6 +42,7 @@ builder.Services.AddTransient<CasoDeUsoDevuelveAdministrador>();
 builder.Services.AddTransient<CasoDeUsoInicioSesion>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 //podria agregar un UsuarioValidador donde controle los nombres y contraseñas de cada uno.
+builder.Services.AddDbContext<SGEContext>();
 
 var app = builder.Build();
 
@@ -55,5 +56,11 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<SGEContext>();
+    context.Database.EnsureCreated(); 
+}
 
 app.Run();

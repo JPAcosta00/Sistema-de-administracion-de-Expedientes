@@ -49,11 +49,8 @@ public class  UsuarioRepositorio : IUsuarioRepositorio{
     }
      public Usuario DevuelveUsuario(string correo){             //se usa para el inicio de sesion en la interfaz
         using var db = new SGEContext();
-        // Incluimos los permisos para que la interfaz sepa qué puede hacer el usuario
-        return db.Usuario
-            .Include(u => u.Permisos)
-            .AsNoTracking()
-            .SingleOrDefault(a => a.Correo == correo);
+        // Quitamos el .Include(u => u.Permisos) porque no es una entidad separada
+        return db.Usuario.Where(u => u.Correo == correo).FirstOrDefault();
      }
      public void EliminarUsuario(string unCorreo){
          using var db = new SGEContext();
