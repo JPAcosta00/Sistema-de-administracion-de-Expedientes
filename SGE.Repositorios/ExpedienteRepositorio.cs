@@ -44,34 +44,15 @@ public class ExpedienteRepositorio : IExpedienteRepositorio{
     }
     public List<Tramite>? ConsultaPorId(int iden){    
         using var db = new SGEContext();   
-        List<Tramite>? lista = new List<Tramite>();
-        foreach(Expediente dato in db.Expediente){
-            if(dato.ID == iden){
-                if(dato.Tramites != null){
-                    foreach(Tramite tra in dato.Tramites){
-                        lista.Add(tra);
-                    }
-                }
-                return lista;
-            }
-        }
-        return lista;
-    }
-    private static Expediente Clonar(Expediente Expe) {
-        return new Expediente()
-        {
-            ID = Expe.ID,
-            TramiteID = Expe.TramiteID,
-            Caratula = Expe.Caratula,
-            Creacion = Expe.Creacion,
-            UltimaModificacion = Expe.UltimaModificacion,
-            UsuarioID = Expe.UsuarioID,
-            Estado = Expe.Estado
-        };
+        // Usamos Include para traer los trámites en una sola consulta eficiente
+         var expediente = db.Expediente.Include(e => e.Tramites).AsNoTracking().SingleOrDefault(e => e.ID == iden);
+        
+        return expediente?.Tramites ?? new List<Tramite>();
     }
     public List<Expediente> ConsultaTodos(){
-         using var db = new SGEContext();
-        return db.Expediente.Select(E => Clonar(E)).ToList();
+        using var db = new SGEContext();
+        // Agregamos AsNoTracking y eliminamos el Select manual que ralentiza todo
+        return db.Expediente.AsNoTracking().ToList();
     }
      public Expediente? GetExpediente(int id){
         using var db = new SGEContext();

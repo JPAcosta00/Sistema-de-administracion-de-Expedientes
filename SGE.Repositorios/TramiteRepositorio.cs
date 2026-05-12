@@ -45,52 +45,37 @@ public class TramiteRepositorio : ITramiteRepositorio{
 
     public List<Tramite>? ConsultaPorEtiqueta(EtiquetaTramite e){
         using var db = new SGEContext();
-        List<Tramite>? listado = new List<Tramite>();
-        foreach(Tramite registro in db.Tramite){
-            if(registro.Etiqueta == e){
-                listado.Add(registro);
-            }
-        }
-        return listado;
-    }
-    private static Tramite Clonar(Tramite Tra) {
-        return new Tramite()
-        {
-            ID = Tra.ID,
-            ExpedienteID = Tra.ExpedienteID,
-            Etiqueta = Tra.Etiqueta,
-            Contenido = Tra.Contenido,
-            Creacion = Tra.Creacion,
-            UltimaModificacion = Tra.UltimaModificacion,
-            UsuarioID = Tra.UsuarioID
-        };
+         // La base de datos filtra y solo nos envía lo que coincide. 
+        // Usamos AsNoTracking porque es una consulta de solo lectura.
+        return db.Tramite
+             .AsNoTracking()
+             .Where(registro => registro.Etiqueta == e)
+             .ToList();
     }
     public List<Tramite> ListadoTramites(){
        using var db = new SGEContext();
-        return db.Tramite.Select(t => Clonar(t)).ToList();
+       return db.Tramite.AsNoTracking().ToList();
     }
     public Tramite? GetTramite(int ID){
-        using var db = new SGEContext();
-        var aux = db.Tramite.Where(t => t.ID == ID).SingleOrDefault();
-        if (aux != null)
-        {
-            return  Clonar(aux);
-        }else{
-            return null;
-        }
+         using var db = new SGEContext();
+        // devuelve obj encontrado o null
+        return db.Tramite.AsNoTracking().FirstOrDefault(t => t.ID == ID);
     }
     public EtiquetaTramite? DevuelveEtiqueta(int expeID){
          using var db = new SGEContext();
-         bool aux = true;
-         foreach(Tramite dato in db.Tramite){
-            if(dato.ExpedienteID == expeID){
-                return dato.Etiqueta;
-                aux = false;
-            }
+         // Buscamos directamente el primer trámite que coincida con el ExpedienteID
+         var etiqueta = db.Tramite
+                     .AsNoTracking()
+                     .Where(t => t.ExpedienteID == expeID)
+                     .Select(t => t.Etiqueta)
+                     .FirstOrDefault();
+
+         // Si no se encontró nada (el valor por defecto de un Enum suele ser el primero, 
+         // pero aquí verificamos si existe el registro)
+        if (etiqueta == null) { 
+             throw new RepositorioException("El Tramite por el que se esta consultando no existe.");
          }
-         if(aux == false){
-            throw new RepositorioException("El Tramite por el que se esta consultando no existe en el repositorio.");
-         }
-         return null;
+
+         return etiqueta;
     }
 }
